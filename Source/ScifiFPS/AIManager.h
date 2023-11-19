@@ -7,20 +7,23 @@
 #include "AIManager.generated.h"
 
 UCLASS()
+// Make sure includes are alphabetical 
+// I don't know if this is ue5 naming convention but the name AAIManger is not clear. is that actor AI manager?
 class SCIFIFPS_API AAIManager : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
+	
 	AAIManager();
 
 protected:
-	// Called when the game starts or when spawned
+// Does this need to be protected if you are overriding it in child?
+	// Called when the game starts or when spawned // comment not needed
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
+	// Called every frame // comment not needed
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
