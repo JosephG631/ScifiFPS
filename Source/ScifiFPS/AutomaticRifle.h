@@ -2,10 +2,13 @@
 
 #pragma once
 
+// ordering 
 #include "CoreMinimal.h"
 #include "GunBase.h"
 #include "AutomaticRifle.generated.h"
 
+
+// You have source control not sure this log is neded 
 /*****************************************************************************************************
  * Type: Class
  *
@@ -13,7 +16,7 @@
  *
  * Author: Jaber Ahmed
  *
- * Purpose: Assault rifle gun, derived from the base class Gun Base
+ * Purpose: Assault rifle gun, derived from the base class Gun Base // I can see it derived 
  *
  * References: N/A
  *
