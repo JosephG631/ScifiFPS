@@ -13,6 +13,6 @@ UCLASS()
 class SCIFIFPS_API UChasePlayerTask : public UBTTaskNode
 {
 	GENERATED_BODY()
-
+// is there meant to be a public/private ?
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& ownerComp, uint8* nodeMemory) override;
 };
