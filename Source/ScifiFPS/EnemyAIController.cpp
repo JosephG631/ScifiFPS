@@ -4,7 +4,7 @@
 #include "EnemyAIController.h"
 #include "EnemyAIManager.h"
 #include "ScifiFPSCharacter.h"
-#include <Kismet/GameplayStatics.h>
+#include <Kismet/GameplayStatics.h> // Don't use a mixture of include typee stick to qutes 
 
 AEnemyAIController::AEnemyAIController()
 	/*:m_sightRadius(3000.0f)
@@ -79,6 +79,7 @@ void AEnemyAIController::OnPossess(APawn* pawn)
 	{
 		if (enemyManager->BehaviourTree->BlackboardAsset)
 		{
+			// Should this and below be checked or does ue4 handle them
 			BlackboardComp->InitializeBlackboard(*(enemyManager->BehaviourTree->BlackboardAsset));
 		}
 		BehaviourTreeComp->StartTree(*enemyManager->BehaviourTree);
