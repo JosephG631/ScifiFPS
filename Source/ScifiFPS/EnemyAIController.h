@@ -14,7 +14,7 @@
 #include <Perception/AISenseConfig_Sight.h>
 #include <Perception/AISenseConfig_Hearing.h>
 #include "EnemyAIController.generated.h"
-
+// forwar dec, ordering and type ^
 /**
  * 
  */
@@ -22,12 +22,13 @@ UCLASS()
 class SCIFIFPS_API AEnemyAIController : public AAIController
 {
 	GENERATED_BODY()
-	
+	// I would not have several public sections just keep them togther 
 public:
 	AEnemyAIController();
 	
 	virtual void BeginPlay() override;
-	
+
+// Should this return a const poiner?
 	FORCEINLINE UBlackboardComponent* GetBlackboardComp() const;
 
 	//UFUNCTION()
@@ -50,6 +51,7 @@ public:
 	//UAISenseConfig_Hearing* HearingConfig; // Hearing configuration
 
 private:
+// members??
 	UBehaviorTreeComponent* BehaviourTreeComp;
 	UBlackboardComponent* BlackboardComp;
 
@@ -58,7 +60,8 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "AI")
 	FName m_isPlayerInCloseRange;
-
+// I know your a solo coder but good practice to say why somthing is commented out. 
+// It should only have a purpose to be commented out 
 	//UPROPERTY(EditDefaultsOnly, Category = "AI")
 	//FName m_hasLineOfSight; 
 
