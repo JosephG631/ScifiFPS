@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+// Ordering
 #include "ChasePlayerTask.h"
 #include "EnemyAIController.h"
 #include "EnemyAIManager.h"
@@ -14,6 +14,7 @@ EBTNodeResult::Type UChasePlayerTask::ExecuteTask(UBehaviorTreeComponent& OwnerC
         AEnemyAIManager* enemyManager = Cast<AEnemyAIManager>(enemyController->GetPawn());
         if (enemyManager)
         {
+            // magice num
             enemyManager->UpdateMaxWalkSpeed(600.0f);
             return EBTNodeResult::Succeeded;
         }
