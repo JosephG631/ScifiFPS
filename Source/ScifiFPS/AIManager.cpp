@@ -3,6 +3,7 @@
 
 #include "AIManager.h"
 
+// No need for these comments above the functions. the naming of the functions should be explicit enough 
 // Sets default values
 AAIManager::AAIManager()
 {
@@ -28,6 +29,7 @@ void AAIManager::Tick(float DeltaTime)
 // Called to bind functionality to input
 void AAIManager::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
+	// Should this pointer be checked for nullness before being passed in?/
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
